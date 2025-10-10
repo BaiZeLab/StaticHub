@@ -32,5 +32,8 @@
 
 ```
 https://raw.githubusercontent.com/BaiZeLab/StaticHub/main/calendar/2025.json
+```
+
+```
 https://cdn.jsdelivr.net/gh/BaiZeLab/StaticHub@main/calendar/2025.json
 ```
