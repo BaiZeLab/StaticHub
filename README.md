@@ -15,7 +15,7 @@
 
 ### calendar
 
-```json
+```jsonc
 {
   // 政策文件网址
   "papers": ["*****"],
