@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxifierProfile version="101" platform="MacOSX" product_id="2" product_minver="200">
+    <Options>
+        <Resolve>
+            <AutoModeDetection enabled="false"/>
+            <ViaProxy enabled="true">
+                <TryLocalDnsFirst enabled="false"/>
+            </ViaProxy>
+            <ExclusionList ExcludeSimpleHostnames="true" ExcludeLocalhost="true" ExcludeSelfHostname="true" ExcludeLocalDomain="true">localhost;%SimpleHostnames%;%ComputerName%;*.local;
+            </ExclusionList>
+        </Resolve>
+        <Encryption mode="basic"/>
+        <HttpProxiesSupport enabled="true"/>
+        <HandleDirectConnections enabled="false"/>
+        <ConnectionLoopDetection enabled="true"/>
+        <ProcessServices enabled="true"/>
+        <ProcessOtherUsers enabled="true"/>
+        <BlockUDP443 enabled="false"/>
+    </Options>
+    <ProxyList>
+        <Proxy id="100" type="SOCKS5">
+            <Address>{{address}}</Address>
+            <Port>{{port}}</Port>
+            <Options>0</Options>
+        </Proxy>
+    </ProxyList>
+    <ChainList/>
+    <RuleList>
+        <Rule enabled="true">
+            <Name>Proxy Softwares</Name>
+            <Applications>"V2rayU.app"; "V2rayU"; net.yanue.V2rayU</Applications>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Localhost</Name>
+            <Targets>localhost; 127.0.0.1; ::1; %ComputerName%; *.local</Targets>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Application</Name>
+            <Targets>*.mypikpak.com; *.telegram.org; *.docker.com; *.discord.com; *.ip.sb; sms-activate.io</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Others</Name>
+            <Targets>*.piaotia.com; uukanshu.cc; *.forgecdn.net</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Develop</Name>
+            <Targets>*.npmjs.org; *.huggingface.co; *.docker.io; *.hf.space</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Google</Name>
+            <Targets>*.google.com; *.googleapis.com; *.googlevideo.com; *.gstatic.com; *.googleusercontent.com; *.gmail.com</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Tiktok</Name>
+            <Targets>*.tiktok.com; *.tiktokcdn-us.com</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Youtube</Name>
+            <Targets>*.youtube.com; *.ytimg.com; *.ytstatic.com; *.youtube-nocookie.com</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>OpenAI</Name>
+            <Targets>chatgpt.com; *.chatgpt.com; *.oaistatic.com</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Github</Name>
+            <Targets>*.github.com; *.github.io; *.githubassets.com; *.githubusercontent.com; *.rawgithub.com; github-cloud.s3.amazonaws.com</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Apple</Name>
+            <Targets>*.cdn-apple.com; *apple.com.akadns.net; *.apple.com; *.akamaiedge.net; apple.xdwscache.ourglb0.com; *.dtwscache.ourwebcdn.com</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Homebrew</Name>
+            <Targets>homebrew.bintray.com; dl.bintray.com; *.brew.sh; *.caskroom.io</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Default</Name>
+            <Action type="Direct"/>
+        </Rule>
+    </RuleList>
+</ProxifierProfile>
