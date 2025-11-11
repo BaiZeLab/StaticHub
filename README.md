@@ -37,3 +37,11 @@ https://raw.githubusercontent.com/BaiZeLab/StaticHub/main/calendar/2025.json
 ```
 https://cdn.jsdelivr.net/gh/BaiZeLab/StaticHub@main/calendar/2025.json
 ```
+
+### proxifier
+
+`ppx`文件采用了变量占位符的方式，满足多样化需求
+
+```
+https://vardelivr.alluniverse.vip/gh/BaiZeLab/StaticHub/main/proxifier/pac.ppx?address=localhost&port=21080
+```
