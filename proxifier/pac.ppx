@@ -37,6 +37,11 @@
             <Action type="Direct"/>
         </Rule>
         <Rule enabled="true">
+            <Name>Private IP ranges</Name>
+            <Targets>10.0.0.0 - 10.255.255.255; 172.16.0.0 - 172.31.255.255; 192.168.0.0 - 192.168.255.255; fc00:: - fdff:ffff:ffff:ffff:ffff:ffff:ffff:ffff;</Targets>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
             <Name>Application</Name>
             <Targets>*.mypikpak.com; *.telegram.org; *.docker.com; *.discord.com; *.ip.sb; sms-activate.io</Targets>
             <Action type="Proxy">100</Action>
@@ -84,6 +89,13 @@
         <Rule enabled="true">
             <Name>Homebrew</Name>
             <Targets>homebrew.bintray.com; dl.bintray.com; *.brew.sh; *.caskroom.io</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Steam CDN</Name>
+            <Applications>"Steam"; steam_osx; "Steam Helper"; steamcmd</Applications>
+            <Targets>*.steamstatic.com; *.akamaihd.net; *.akamai.net</Targets>
+            <Ports>80; 443</Ports>
             <Action type="Proxy">100</Action>
         </Rule>
         <Rule enabled="true">
