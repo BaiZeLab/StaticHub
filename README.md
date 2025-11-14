@@ -41,11 +41,6 @@ https://cdn.jsdelivr.net/gh/BaiZeLab/StaticHub@main/calendar/2025.json
 ### proxifier
 
 `ppx`文件采用了变量占位符的方式，满足多样化需求
-ps: `.`需要进行转义`%2E`
-
 ```
-https://vardelivr.alluniverse.vip/gh/BaiZeLab/StaticHub/main/proxifier/pac.ppx?address=localhost&port=21080
-```
-```
-https://vardelivr.alluniverse.vip/gh/BaiZeLab/StaticHub/main/proxifier/pac.ppx?address=192%2E168%2E1%2E1&port=21080
+https://vardelivr.alluniverse.vip/pf/localhost/21080/pac.ppx
 ```
