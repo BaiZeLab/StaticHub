@@ -6,8 +6,7 @@
             <ViaProxy enabled="true">
                 <TryLocalDnsFirst enabled="false"/>
             </ViaProxy>
-            <ExclusionList ExcludeSimpleHostnames="true" ExcludeLocalhost="true" ExcludeSelfHostname="true" ExcludeLocalDomain="true">localhost;%SimpleHostnames%;%ComputerName%;*.local;
-            </ExclusionList>
+            <ExclusionList ExcludeSimpleHostnames="true" ExcludeLocalhost="true" ExcludeSelfHostname="true" ExcludeLocalDomain="true">localhost;%SimpleHostnames%;%ComputerName%;*.local</ExclusionList>
         </Resolve>
         <Encryption mode="basic"/>
         <HttpProxiesSupport enabled="true"/>
