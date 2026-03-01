@@ -2,19 +2,19 @@
 <ProxifierProfile version="101" platform="Universal" product_id="2" product_minver="200">
     <Options>
         <Resolve>
-            <AutoModeDetection enabled="false"/>
+            <AutoModeDetection enabled="false" />
             <ViaProxy enabled="true">
-                <TryLocalDnsFirst enabled="false"/>
+                <TryLocalDnsFirst enabled="false" />
             </ViaProxy>
             <ExclusionList ExcludeSimpleHostnames="true" ExcludeLocalhost="true" ExcludeSelfHostname="true" ExcludeLocalDomain="true">localhost;%SimpleHostnames%;%ComputerName%;*.local</ExclusionList>
         </Resolve>
-        <Encryption mode="basic"/>
-        <HttpProxiesSupport enabled="true"/>
-        <HandleDirectConnections enabled="false"/>
-        <ConnectionLoopDetection enabled="true"/>
-        <ProcessServices enabled="true"/>
-        <ProcessOtherUsers enabled="true"/>
-        <BlockUDP443 enabled="false"/>
+        <Encryption mode="basic" />
+        <HttpProxiesSupport enabled="true" />
+        <HandleDirectConnections enabled="false" />
+        <ConnectionLoopDetection enabled="true" />
+        <ProcessServices enabled="true" />
+        <ProcessOtherUsers enabled="true" />
+        <BlockUDP443 enabled="false" />
     </Options>
     <ProxyList>
         <Proxy id="100" type="SOCKS5">
@@ -23,26 +23,26 @@
             <Options>0</Options>
         </Proxy>
     </ProxyList>
-    <ChainList/>
+    <ChainList />
     <RuleList>
         <Rule enabled="true">
             <Name>Proxy Softwares</Name>
             <Applications>"V2rayU.app"; "V2rayU"; net.yanue.V2rayU</Applications>
-            <Action type="Direct"/>
+            <Action type="Direct" />
         </Rule>
         <Rule enabled="true">
             <Name>Localhost</Name>
             <Targets>localhost; 127.0.0.1; ::1; %ComputerName%; *.local</Targets>
-            <Action type="Direct"/>
+            <Action type="Direct" />
         </Rule>
         <Rule enabled="true">
             <Name>Private IP ranges</Name>
-            <Targets>10.0.0.0-10.255.255.255; 172.16.0.0-172.31.255.255; 192.168.0.0-192.168.255.255; fc00::-fdff:ffff:ffff:ffff:ffff:ffff:ffff:ffff</Targets>
-            <Action type="Direct"/>
+            <Targets>10.0.0.0-10.255.255.255; 172.16.0.0-172.31.255.255;192.168.0.0-192.168.255.255; fc00::-fdff:ffff:ffff:ffff:ffff:ffff:ffff:ffff</Targets>
+            <Action type="Direct" />
         </Rule>
         <Rule enabled="true">
             <Name>Application</Name>
-            <Targets>*.mypikpak.com; *.telegram.org; *.docker.com; *.discord.com; *.ip.sb; sms-activate.io</Targets>
+            <Targets>*.mypikpak.com; *.telegram.org; *.docker.com; *.discord.com; *.ip.sb;sms-activate.io</Targets>
             <Action type="Proxy">100</Action>
         </Rule>
         <Rule enabled="true">
@@ -57,7 +57,7 @@
         </Rule>
         <Rule enabled="true">
             <Name>Google</Name>
-            <Targets>*.google.com; *.googleapis.com; *.googlevideo.com; *.gstatic.com; *.googleusercontent.com; *.gmail.com</Targets>
+            <Targets>*.google.com; *.googleapis.com; *.googlevideo.com; *.gstatic.com;*.googleusercontent.com; *.gmail.com</Targets>
             <Action type="Proxy">100</Action>
         </Rule>
         <Rule enabled="true">
@@ -77,12 +77,12 @@
         </Rule>
         <Rule enabled="true">
             <Name>Github</Name>
-            <Targets>*.github.com; *.github.io; *.githubassets.com; *.githubusercontent.com; *.rawgithub.com; github-cloud.s3.amazonaws.com</Targets>
+            <Targets>*.github.com; *.github.io; *.githubassets.com; *.githubusercontent.com;*.rawgithub.com; github-cloud.s3.amazonaws.com</Targets>
             <Action type="Proxy">100</Action>
         </Rule>
         <Rule enabled="true">
             <Name>Apple</Name>
-            <Targets>*.cdn-apple.com; *apple.com.akadns.net; *.apple.com; *.akamaiedge.net; apple.xdwscache.ourglb0.com; *.dtwscache.ourwebcdn.com</Targets>
+            <Targets>*.cdn-apple.com; *apple.com.akadns.net; *.apple.com; *.akamaiedge.net;apple.xdwscache.ourglb0.com; *.dtwscache.ourwebcdn.com</Targets>
             <Action type="Proxy">100</Action>
         </Rule>
         <Rule enabled="true">
@@ -99,7 +99,7 @@
         </Rule>
         <Rule enabled="true">
             <Name>Default</Name>
-            <Action type="Direct"/>
+            <Action type="Direct" />
         </Rule>
     </RuleList>
 </ProxifierProfile>
