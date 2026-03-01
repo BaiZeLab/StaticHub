@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ProxifierProfile version="101" platform="MacOSX" product_id="2" product_minver="200">
+<ProxifierProfile version="101" platform="Universal" product_id="2" product_minver="200">
     <Options>
         <Resolve>
             <AutoModeDetection enabled="false"/>
