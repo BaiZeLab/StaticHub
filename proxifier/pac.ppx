@@ -27,7 +27,7 @@
     <RuleList>
         <Rule enabled="true">
             <Name>Proxy Softwares</Name>
-            <Applications>"V2rayU.app"; "V2rayU"; net.yanue.V2rayU</Applications>
+            <Applications>"V2rayU.app"; "V2rayU"; net.yanue.V2rayU; V2rayU.exe</Applications>
             <Action type="Direct"/>
         </Rule>
         <Rule enabled="true">
@@ -92,7 +92,7 @@
         </Rule>
         <Rule enabled="true">
             <Name>Steam CDN</Name>
-            <Applications>"Steam"; steam_osx; "Steam Helper"; steamcmd</Applications>
+            <Applications>"Steam"; steam_osx; "Steam Helper"; steamcmd; Steam.exe; "Steam Helper.exe"; steamcmd.exe</Applications>
             <Targets>*.steamstatic.com; *.akamaihd.net; *.akamai.net</Targets>
             <Ports>80; 443</Ports>
             <Action type="Proxy">100</Action>
