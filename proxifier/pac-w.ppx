@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxifierProfile version="102" platform="Windows" product_id="1" product_minver="400">
+	<Options>
+		<Resolve>
+			<AutoModeDetection enabled="false" />
+			<ViaProxy enabled="true" />
+			<BlockNonATypes enabled="false" />
+			<ExclusionList OnlyFromListMode="false">localhost;%SimpleHostnames%;%ComputerName%;*.local;
+            </ExclusionList>
+			<DnsUdpMode>0</DnsUdpMode>
+		</Resolve>
+		<Encryption mode="basic" />
+		<ConnectionLoopDetection enabled="true" resolve="true" />
+		<Udp mode="mode_bypass" />
+		<LeakPreventionMode enabled="false" />
+		<ProcessOtherUsers enabled="true" />
+		<ProcessServices enabled="true" />
+		<HandleDirectConnections enabled="false" />
+		<HttpProxiesSupport enabled="true" />
+		<ProxificationPortableEngine subsystem="32">
+			<Type hotpatch="true">Prologue</Type>
+			<Location>Winsock</Location>
+		</ProxificationPortableEngine>
+		<ProxificationPortableEngine subsystem="64">
+			<Type hotpatch="false">Prologue</Type>
+			<Location>Winsock</Location>
+		</ProxificationPortableEngine>
+	</Options>
+	<ProxyList>
+		<Proxy id="100" type="SOCKS5">
+			<Options>0</Options>
+			<Port>{port}</Port>
+			<Address>{address}</Address>
+		</Proxy>
+	</ProxyList>
+	<ChainList />
+	<RuleList>
+		<Rule enabled="true">
+			<Action type="Direct" />
+			<Applications>"V2rayU.app"; "V2rayU"; net.yanue.V2rayU</Applications>
+			<Name>Proxy Softwares</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Direct" />
+			<Targets>localhost; 127.0.0.1; ::1; %ComputerName%; *.local</Targets>
+			<Name>Localhost</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Direct" />
+			<Targets>10.0.0.0-10.255.255.255; 172.16.0.0-172.31.255.255; 192.168.0.0-192.168.255.255; fc00::-fdff:ffff:ffff:ffff:ffff:ffff:ffff:ffff</Targets>
+			<Name>Private IP ranges</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">100</Action>
+			<Targets>*.mypikpak.com; *.telegram.org; *.docker.com; *.discord.com; *.ip.sb; sms-activate.io</Targets>
+			<Name>Application</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">100</Action>
+			<Targets>*.piaotia.com; uukanshu.cc; *.forgecdn.net</Targets>
+			<Name>Others</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">100</Action>
+			<Targets>*.npmjs.org; *.huggingface.co; *.docker.io; *.hf.space</Targets>
+			<Name>Develop</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">100</Action>
+			<Targets>*.google.com; *.googleapis.com; *.googlevideo.com; *.gstatic.com; *.googleusercontent.com; *.gmail.com</Targets>
+			<Name>Google</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">100</Action>
+			<Targets>*.tiktok.com; *.tiktokcdn-us.com</Targets>
+			<Name>Tiktok</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">100</Action>
+			<Targets>*.youtube.com; *.ytimg.com; *.ytstatic.com; *.youtube-nocookie.com</Targets>
+			<Name>Youtube</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">100</Action>
+			<Targets>chatgpt.com; *.chatgpt.com; *.oaistatic.com</Targets>
+			<Name>OpenAI</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">100</Action>
+			<Targets>*.github.com; *.github.io; *.githubassets.com; *.githubusercontent.com; *.rawgithub.com; github-cloud.s3.amazonaws.com</Targets>
+			<Name>Github</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">100</Action>
+			<Targets>*.cdn-apple.com; *apple.com.akadns.net; *.apple.com; *.akamaiedge.net; apple.xdwscache.ourglb0.com; *.dtwscache.ourwebcdn.com</Targets>
+			<Name>Apple</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">100</Action>
+			<Targets>homebrew.bintray.com; dl.bintray.com; *.brew.sh; *.caskroom.io</Targets>
+			<Name>Homebrew</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Proxy">100</Action>
+			<Ports>80; 443</Ports>
+			<Targets>*.steamstatic.com; *.akamaihd.net; *.akamai.net</Targets>
+			<Applications>"Steam"; steam_osx; "Steam Helper"; steamcmd</Applications>
+			<Name>Steam CDN</Name>
+		</Rule>
+		<Rule enabled="true">
+			<Action type="Direct" />
+			<Name>Default</Name>
+		</Rule>
+	</RuleList>
+</ProxifierProfile>
